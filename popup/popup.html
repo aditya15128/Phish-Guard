@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="pg-popup">
+    <header class="pg-header">
+      <div class="pg-brand">
+        <img src="../assets/icon.png" alt="" width="24" height="24">
+        <h1>PhishGuard</h1>
+      </div>
+      <span class="pg-status" id="status">Ready</span>
+    </header>
+
+    <main class="pg-main">
+      <section class="pg-section" id="currentSiteSection">
+        <div class="pg-site-info" id="siteInfo">Loading...</div>
+        <div class="pg-verdict" id="verdict" style="display: none;"></div>
+      </section>
+
+      <section class="pg-section pg-stats-section">
+        <h3>Statistics</h3>
+        <div class="pg-stats-grid">
+          <div class="pg-stat">
+            <span class="pg-stat-value" id="statTotal">0</span>
+            <span class="pg-stat-label">Scanned</span>
+          </div>
+          <div class="pg-stat pg-stat-danger">
+            <span class="pg-stat-value" id="statPhishing">0</span>
+            <span class="pg-stat-label">Threats</span>
+          </div>
+          <div class="pg-stat pg-stat-safe">
+            <span class="pg-stat-value" id="statClean">0</span>
+            <span class="pg-stat-label">Clean</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="pg-section pg-actions-section">
+        <button class="pg-btn pg-btn-primary pg-btn-full" id="scanBtn">
+          <span class="pg-btn-icon">🔍</span> Scan Current Page
+        </button>
+        <button class="pg-btn pg-btn-secondary pg-btn-full" id="clearBtn">Clear History</button>
+      </section>
+
+      <section class="pg-section" id="recentSection">
+        <div class="pg-section-header">
+          <h3>Recent Scans</h3>
+        </div>
+        <div class="pg-recent-list" id="recentList"></div>
+      </section>
+    </main>
+
+    <footer class="pg-footer">
+      <span class="pg-version">v1.0.0</span>
+    </footer>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

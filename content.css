@@ -1,0 +1,15 @@
+/* Day 2: Content script styles - warning banner */
+/* Placeholder for Day 1 - prevents manifest errors */
+
+#phishguard-banner-host {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 2147483647 !important;
+  pointer-events: auto !important;
+}
+
+#phishguard-banner-host * {
+  box-sizing: border-box;
+}
